@@ -46,7 +46,6 @@ namespace SunShadow.Editor
             PlayerSettings.WebGL.dataCaching = !debug;
             PlayerSettings.WebGL.compressionFormat = WebGLCompressionFormat.Gzip;
             PlayerSettings.WebGL.nameFilesAsHashes = true;
-            PlayerSettings.WebGL.debugSymbols = debug;
             PlayerSettings.WebGL.decompressionFallback = true;
 
             // 色彩空间: Gamma (WebGL 更小更快)
@@ -58,16 +57,8 @@ namespace SunShadow.Editor
                 BuildTargetGroup.WebGL,
                 debug ? ManagedStrippingLevel.Medium : ManagedStrippingLevel.High);
 
-            // IL2CPP 优化
-            PlayerSettings.SetIl2CppCompilerConfiguration(
-                BuildTargetGroup.WebGL,
-                debug ? IL2CPPCompilerConfiguration.Debug : IL2CPPCompilerConfiguration.Master);
-
             // 模板
             PlayerSettings.WebGL.template = "PROJECT:KidFriendly";
-
-            // 发布设置
-            PlayerSettings.WebGL.enableExceptions = debug;
 
             // Quality
             int qualityLevel = debug ? 1 : 0;

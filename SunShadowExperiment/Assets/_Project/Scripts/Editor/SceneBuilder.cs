@@ -98,7 +98,7 @@ namespace SunShadow.Editor
             sunLight.shadows = LightShadows.Soft;
             sunLight.shadowStrength = 0.85f;
             sunLight.intensity = 1.3f;
-            sunLight.shadowResolution = ShadowResolution.Medium;
+            sunLight.shadowResolution = UnityEngine.Rendering.LightShadowResolution.Medium;
             sunLight.shadowNearPlane = 0.1f;
             var sunCtrl = sunGo.AddComponent<SunController>();
 
