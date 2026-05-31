@@ -268,7 +268,6 @@ namespace SunShadow.Editor
             txt.fontSize = fontSize;
             txt.alignment = anchor;
             txt.color = Color.black;
-            txt.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             return go;
         }
 
@@ -309,7 +308,6 @@ namespace SunShadow.Editor
             txt.fontSize = fontSize;
             txt.alignment = TextAnchor.MiddleCenter;
             txt.color = Color.white;
-            txt.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             return go;
         }
     }
